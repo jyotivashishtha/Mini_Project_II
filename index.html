@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+       
+        body ,html{
+            background: url(https://mobimg.b-cdn.net/v3/fetch/17/1797c1dba4f31fd99b5fd0a2146f2e13.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            
+        }
+        .form{
+            margin: auto;
+            width: 300px;
+            margin-top: 150px;
+            border: rgb(145, 133, 133) 2px solid;
+            padding: 30px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        #register{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 300px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: aliceblue;
+        }
+        #register input{
+            height: 20px;
+            border-radius: 5px;
+            background-color: whitesmoke;
+        }
+           #man 
+        {
+            background-color: silver;
+            margin: auto;
+            width: 70px;
+            /* height: 80px; */
+            border-radius: 5px;
+            font-weight: bolder;
+            text-align: center;
+            /* line-height: 40px; */
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+      <div class="head">
+
+		 <div class="form">
+            <form id='register' class='input-group-register' action="player.html">
+               <p> Enter the name of first player-1: *</p> 
+                <input type='text'class='input-field'placeholder='Enter ur name'  id="p11" required>
+                <br>
+                <p> Enter the name of first player-2: *</p> 
+                <input type='text'class='input-field'placeholder='Enter ur name'  id="p22" required>
+                
+                <p>I agree to the terms and conditions of Game</p>
+                <input type='checkbox'class='check-box'>
+                <br>
+                     <!-- <a href="./player.html" id="button" value="click" onclick="passvalues(); " >Enter</a> -->
+                     <input id="man" type="submit" value="Enter"  onclick="passvalues();">
+                </form>
+         
+         </div>
+      </div>
+ 
+  
+ <script >
+     function passvalues()
+     {
+
+        var firstname=document.getElementById("p11") .value;
+        var secondname=document.getElementById("p22").value;
+
+//         if(firstname=="" || secondname==""){
+//             alert("Field should not be empty");
+//         }
+
+        localStorage.setItem("textvalue",firstname,"textvalue2",secondname);
+         localStorage.setItem("textvalue2",secondname);
+        return false;
+     }
+ </script>
+</body>
+</html>
